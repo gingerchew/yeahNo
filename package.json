@@ -1,0 +1,29 @@
+{
+  "name": "yeahno",
+  "version": "1.0.0",
+  "description": "Determine if a value is nullish using plain spoken language",
+  "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "test": "vitest",
+    "build": "vite build"
+  },
+  "keywords": [
+    "yeah",
+    "no",
+    "yeah no",
+    "no yeah",
+    "yeah no yeah",
+    "no yeah no"
+  ],
+  "author": "ginger",
+  "license": "MIT",
+  "devDependencies": {
+    "tsc": "^2.0.4",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1"
+  },
+  "dependencies": {
+    "vitest": "^4.0.18"
+  }
+}
