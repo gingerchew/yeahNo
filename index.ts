@@ -1,6 +1,6 @@
 import { foundNotNullish, foundNullish } from "./messages";
 
-type nullish = any|null|undefined;
+type nullish = null|undefined;
 
 export class NullishError extends Error {
     constructor(expectToBeNull:boolean) {
