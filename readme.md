@@ -18,3 +18,7 @@ I think it could be confusing for developers who only speak english.
 - Isn't this a bit over engineered? Did you really need to write tests for this? Like, why would anyone need any of this?
 
 I don't know, maybe it will show up on hacker news or something?
+
+## TODO
+
+- Inline the strings in the built file
