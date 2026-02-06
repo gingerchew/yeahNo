@@ -1,2 +1,4 @@
-export const foundNotNullish = 'Value was found to not be nullish';
-export const foundNullish = 'Value was found to be nullish';
+const foundNotNullish = 'Value was found to not be nullish';
+const foundNullish = 'Value was found to be nullish';
+
+export { foundNotNullish, foundNullish }
