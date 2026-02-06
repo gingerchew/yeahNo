@@ -8,7 +8,9 @@ it('should return the value if not nullish', () => {
 
     expect(noYeah(notNullishValue)).toBe(1);
     expect(yeahNoYeah(notNullishValue)).toBe(1);
+    /* @ts-expect-error */
     expect(() => noYeah(nullishValue)).toThrow(foundNullish)
+    /* @ts-expect-error */
     expect(() => yeahNoYeah(nullishValue)).toThrow(foundNullish);
 });
 
@@ -18,6 +20,8 @@ it('should return the value if nullish', () => {
 
     expect(yeahNo(nullishValue)).toBe(null)
     expect(noYeahNo(nullishValue)).toBe(null);
+    /* @ts-expect-error */
     expect(() => yeahNo(notNullishValue)).toThrow(foundNotNullish);
+    /* @ts-expect-error */
     expect(() => noYeahNo(notNullishValue)).toThrow(foundNotNullish);
 })
