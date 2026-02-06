@@ -1,7 +1,7 @@
 import { foundNotNullish, foundNullish } from "./messages";
 
-type nullish = null|undefined;
-
+type Nullish = null|undefined;
+type NotNullish<T> = T extends null|undefined ? never : T;
 export class NullishError extends Error {
     constructor(expectToBeNull:boolean) {
         super();
@@ -30,25 +30,25 @@ const isNullish = (value: any, expectToBeNull = false) => {
  * @returns value
  * @throws NullishError
  */
-export const yeahNo = (value: nullish) => isNullish(value, true);
+export const yeahNo = (value: Nullish) => isNullish(value, true);
 /**
  * Determines if a value is nullish, throws if true
  * @param value 
  * @returns value
  * @throws NullishError
  */
-export const noYeah = (value: any) => isNullish(value);
+export const noYeah = <T extends any>(value: NotNullish<T>) => isNullish(value);
 /**
  * Determines if a value is not nullish, throws if true
  * @param value
  * @returns value
  * @throws NullishError
  */
-export const noYeahNo = (value:nullish) => isNullish(value, true);
+export const noYeahNo = (value:Nullish) => isNullish(value, true);
 /**
  * Determines if a value is nullish, throws if true
  * @param value 
  * @returns value
  * @throws NullishError
  */
-export const yeahNoYeah = (value:any) => isNullish(value);
+export const yeahNoYeah = <T extends any>(value: NotNullish<T>) => isNullish(value);
