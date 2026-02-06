@@ -5,8 +5,7 @@ type NotNullish<T> = T extends null|undefined ? never : T;
 
 export class NullishError extends Error {
     constructor(expectToBeNull:boolean) {
-        super();
-        this.message = expectToBeNull ? foundNotNullish : foundNullish;
+        super(expectToBeNull ? foundNotNullish : foundNullish);
     }
 }
 
